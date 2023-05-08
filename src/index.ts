@@ -77,6 +77,7 @@ export default function createInfoPlugin(option?: UserOption): Plugin {
           `export const CI = ${ci.isCI ? `"${ci.name}"` : 'null'}`,
           `export const github = ${JSON.stringify(github ?? null)}`,
           gen('sha'),
+          gen('branch'),
           gen('abbreviatedSha'),
           gen('tag'),
           gen('committer'),
